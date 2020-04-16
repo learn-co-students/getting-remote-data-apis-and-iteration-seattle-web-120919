@@ -4,6 +4,7 @@ end
 
 def get_character_from_user
   puts "please enter a character name"
-  gets.chomp
-  # capture the user's input, return input downcased.
+  gets.chomp.split.map(&:capitalize).join(' ')
+  # gets.chomp captures input, chomp off newline that gets added with return 
+  # ie:  user inputs luke, hits enter  => gets = luke\n
 end
